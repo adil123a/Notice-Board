@@ -1,0 +1,75 @@
+/* Global Styles */
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+/* Navigation Bar Styles */
+nav {
+	background-color: #333;
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 80px;
+	padding: 0 50px;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+	margin: 0 10px;
+}
+
+nav a:hover {
+	color: #ccc;
+}
+
+.burger {
+	display: none;
+	cursor: pointer;
+}
+
+.burger div {
+	width: 25px;
+	height: 3px;
+	background-color: #fff;
+	margin: 5px;
+	transition: all 0.3s ease;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+	nav {
+		flex-direction: column;
+		height: auto;
+	}
+	nav a {
+		margin: 10px 0;
+	}
+	.burger {
+		display: block;
+	}
+	.nav-links {
+		display: none;
+	}
+}
+
+/* JavaScript Styles */
+.nav-links.active {
+	display: flex;
+	flex-direction: column;
+}
+
+.burger .line1 {
+	transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger .line2 {
+	opacity: 0;
+}
+
+.burger .line3 {
+	transform: rotate(-45deg) translate(5px, -5px);
+}
